@@ -33,3 +33,11 @@ NOTES: **container_tag** is the name you will give to your Docker container. **m
 - Type in a termina `source activate snakes` to log into the virtual environment that contains NEURON and NetPyNE.
 - The mod files will be already compiled ones you open the container.
 - The building will run in the background, so check the out.log and err.log files.
+
+### Docker 101:
+- get docker containers: `docker ps`
+- delete all images: `docker system prune -a` (removes absolutely everything)
+- get list of images: `docker images -a`
+- kill all active containers: `docker kill $(docker ps -q)`
+- remove all containers: `docker rm $(docker ps -a -q)`
+- remove all images: `docker rmi $(docker images -q)`
