@@ -8,13 +8,16 @@ Use this script to export a NetPyNE model into a Docker container.
 
 ## Instructions:
 ### create the image:
-- Create a folder in your machine and copy **dockerfile** into it. 
+- Clone this repo. 
 - Launch the Docker app in your machine.
-- Type in the terminal: `docker build -t container_tag --build-arg GITHUB=your_model_github_repository -f ./dockerfile .`  (container_tag is the name you will give to the container. You can choose any name. Don't forget the whitespace followed by a dot at the very end)
+- Open a terminar and go inside netpyne_docker folder.
+- Type: `python netpyne_docker container_tag model_github_repository`  
+
+NOTES: **container_tag** is the name you will give to your Docker container. **model_github_repository** is the github URL where you are sharing your model.
 ### run the container:
 - `docker run -it container_tag bash`
 
-### run your python model:
+### run your python model (when your are inside the container):
 - python init.py
 
 ### Container packages
